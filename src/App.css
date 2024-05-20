@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Glegoo:wght@400;700&family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+  margin-bottom: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 28px;
+}
+
+hr {
+  margin: 10px 0;
+}
+
+.logo {
+  font-family: "Glegoo";
+  font-size: 44px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.form-inputs-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 600px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  input {
+    margin: 5px 0px;
+    background-color: inherit;
+    border: none;
+    background-color: var(--bg-color-fifth);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  input::placeholder {
+    color: var(--text-color-main);
+    opacity: 30%;
+  }
+}
+
+textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 60px;
+  border: none;
+  border-radius: 5px;
+  background: var(--bg-color-fifth);
+  font-family: "Ubuntu", sans-serif;
+  resize: none;
+  padding: 10px;
+}
+
+.form-input-title {
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
+
+.rent-feature {
+  background: var(--bg-color-third);
+  border-radius: 5px;
+  padding: 5px 10px;
+}
