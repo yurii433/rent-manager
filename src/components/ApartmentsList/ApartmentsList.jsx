@@ -60,10 +60,6 @@ const ApartmentsList = ({
           ></RentItem>
         );
       })}
-      {/* only for test purposes
-      <button onClick={() => localStorage.clear()}>
-        Clear local storage
-      </button>{" "} */}
     </div>
   );
 };
