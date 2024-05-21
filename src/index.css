@@ -5,18 +5,6 @@
   color-scheme: light dark;
 
   /*COLORS VARIABLES*/
-  --bg-color-main: #000000;
-  --bg-color-second: #161618;
-  --bg-color-third: #212124;
-  --bg-color-fourth: #ffffff;
-  --bg-color-fifth: #554e4e;
-  --text-color-main: #ffffff;
-  --text-color-second: #b7ccca;
-  --text-color-third: #6c7871;
-  --button-color: #332946;
-  --button-color-hover: #2c223f;
-  --button-color-red-main: #e63946;
-  --button-color-red-second: #bd2d38;
 
   color: var(--text-color-main);
   background-color: var(--bg-color-main);
@@ -35,6 +23,23 @@ body {
   min-height: 100vh;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*COLORS VARIABLES*/
+    --bg-color-main: #000000;
+    --bg-color-second: #161618;
+    --bg-color-third: #212124;
+    --bg-color-fourth: #ffffff;
+    --bg-color-fifth: #554e4e;
+    --text-color-main: #ffffff;
+    --text-color-second: #b7ccca;
+    --text-color-third: #6c7871;
+    --button-color: #332946;
+    --button-color-hover: #2c223f;
+    --button-color-red-main: #e63946;
+    --button-color-red-second: #bd2d38;
+  }
+}
 @media (prefers-color-scheme: light) {
   :root {
     /*COLORS VARIABLES*/

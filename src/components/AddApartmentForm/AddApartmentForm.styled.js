@@ -52,4 +52,9 @@ export const StyledApartmentForm = styled.form`
     border: none;
     border-radius: 5px;
   }
+
+  .error-message {
+    color: red;
+    font-size: small;
+  }
 `;

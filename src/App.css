@@ -43,7 +43,7 @@ hr {
 .form-inputs-wrap {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 20px;
   max-width: 600px;
 }
 
@@ -65,6 +65,18 @@ hr {
     opacity: 30%;
   }
 }
+.form-input-small {
+  width: 100px;
+  input {
+    max-width: 100%;
+  }
+}
+.form-input-big {
+  width: 100%;
+  input {
+    width: 100%;
+  }
+}
 
 textarea {
   width: 100%;
@@ -78,15 +90,14 @@ textarea {
   padding: 10px;
 }
 
-.form-input-title {
-  width: 100%;
-  input {
-    width: 100%;
-  }
-}
-
 .rent-feature {
   background: var(--bg-color-third);
   border-radius: 5px;
   padding: 5px 10px;
+}
+
+@media (max-width: 650px) {
+  .form-inputs-wrap {
+    flex-direction: column;
+  }
 }

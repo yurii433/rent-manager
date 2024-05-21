@@ -13,4 +13,17 @@ export const SortingEl = styled.div`
     padding: 10px;
     border: none;
     border-radius: 5px;
+  }
+  .fitered-to-all {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: small;
+    margin: 0 auto;
+    align-self: center;
+    text-align: end;
+    margin-right: 20px;
+    background: var(--bg-color-fifth);
+    padding: 5px;
+    border-radius: 5px;
+  }
 `;

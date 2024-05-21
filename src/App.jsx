@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { defaultData as defaultRents } from "./defaultData";
 
 import AddApartmentForm from "./components/AddApartmentForm/AddApartmentForm";
 import ApartmentsList from "./components/ApartmentsList/ApartmentsList";
@@ -7,44 +7,10 @@ import ApartmentsList from "./components/ApartmentsList/ApartmentsList";
 import "./App.css";
 
 function App() {
-  const defaultRents = [
-    {
-      title: "House in mountains",
-      rooms: 3,
-      price: 150,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum at cum. Accusamus in voluptates perspiciatis ipsa magni laborum a, ratione harum ex vitae provident veritatis ea sint fuga. Adipisci.",
-      id: uuidv4(),
-    },
-    {
-      title: "Beach bungalow",
-      rooms: 5,
-      price: 220,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum at cum. Accusamus in voluptates perspiciatis ipsa magni laborum a, ratione harum ex vitae provident veritatis ea sint fuga. Adipisci.",
-      id: uuidv4(),
-    },
-    {
-      title: "Room in the city center",
-      rooms: 1,
-      price: 100,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum at cum. Accusamus in voluptates perspiciatis ipsa magni laborum a, ratione harum ex vitae provident veritatis ea sint fuga. Adipisci.",
-      id: uuidv4(),
-    },
-    {
-      title: "Cozy apartment in village",
-      rooms: 2,
-      price: 50,
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum at cum. Accusamus in voluptates perspiciatis ipsa magni laborum a, ratione harum ex vitae provident veritatis ea sint fuga. Adipisci.",
-      id: uuidv4(),
-    },
-  ];
-
   const [rents, setRents] = useState(
     JSON.parse(localStorage.getItem("localRents")) || defaultRents
   );
+
   const [filteredRents, setFilteredRents] = useState(rents);
 
   useEffect(() => {
@@ -52,6 +18,7 @@ function App() {
   }, [rents]);
 
   const addRent = (newRent) => {
+    console.log(newRent);
     setFilteredRents((prevRents) =>
       prevRents ? [...prevRents, newRent] : [newRent]
     );
@@ -63,7 +30,7 @@ function App() {
     setFilteredRents(() => filteredRents.filter((rent) => rent.id !== rentId));
   };
 
-  const sortRents = (value) => {
+  const sortRentsByPrice = (value) => {
     if (value === "asc") {
       setFilteredRents((prevRents) =>
         prevRents.toSorted((a, b) => a.price - b.price)
@@ -95,7 +62,7 @@ function App() {
       <main>
         <AddApartmentForm addRent={addRent} />
         <ApartmentsList
-          sortRents={sortRents}
+          sortRents={sortRentsByPrice}
           filterRentsByRoomsNumber={filterRentsByRoomsNumber}
           deleteRent={deleteRent}
           rents={rents}
