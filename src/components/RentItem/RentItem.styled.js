@@ -44,6 +44,8 @@ export const RentItem = styled.div`
       border: none;
       border-radius: 5px;
       height: 50px;
+      color: var(--text-color-main);
+      font-weight: 600;
     }
 
     button:hover {
@@ -57,8 +59,7 @@ export const RentItem = styled.div`
       button{
         width: 100%;
         margin-top: 10px;
-        color: var(--text-color-main);
-        font-weight: 600;
+ 
       }
     }
   }
