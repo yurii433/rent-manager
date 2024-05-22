@@ -8,6 +8,7 @@ export const SortingEl = styled.div`
     align-items: center;
   }
   select {
+    color: var(--text-color-second);
     background-color: var(--bg-color-fifth);
     margin: 5px 0;
     padding: 10px;

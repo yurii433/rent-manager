@@ -8,11 +8,58 @@
 
 header {
   display: flex;
+  justify-content: space-between;
   align-items: baseline;
   margin: 0;
   padding: 0;
   gap: 0.5rem;
   margin-bottom: 25px;
+  position: relative;
+}
+
+#theme-toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #333;
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Making a dot switch inside the theme-toggle Button */
+#theme-toggle::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in;
+}
+
+/* Changing theme-toggle button background when checked */
+#theme-toggle:checked {
+  background: var(--bg-color-third);
+}
+
+/* Changing dot switch color and moving to the right side when checked */
+#theme-toggle:checked::before {
+  background: #333;
+  left: 32px;
+}
+#theme-toggle:checked ~ .container {
+  background-color: #333;
+  color: #eee;
 }
 
 main {

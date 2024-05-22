@@ -58,6 +58,9 @@ function App() {
     <>
       <header>
         <h2 className="logo">Rent Manager</h2>
+        <div>
+          <input type="checkbox" id="theme-toggle" />
+        </div>
       </header>
       <main>
         <AddApartmentForm addRent={addRent} />

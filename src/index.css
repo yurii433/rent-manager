@@ -23,6 +23,23 @@ body {
   min-height: 100vh;
 }
 
+body:has(#theme-toggle:checked) {
+  color: #1b1b1b;
+  background-color: #fafafa;
+  --bg-color-main: #fafafa;
+  --bg-color-second: #d2d3db;
+  --bg-color-third: #e4e5f1;
+  --bg-color-fourth: #9394a5;
+  --bg-color-fifth: #eeeeee;
+  --text-color-main: #1b1b1b;
+  --text-color-second: #6a6076;
+  --text-color-third: #b3b3b3;
+  --button-color: #b1cdef;
+  --button-color-hover: #6fa9ef;
+  --button-color-red-main: #ffc7cc;
+  --button-color-red-second: #f78992;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     /*COLORS VARIABLES*/
